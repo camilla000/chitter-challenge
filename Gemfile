@@ -1,5 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'capybara'
+gem 'pg'
+gem 'sinatra'
+gem 'rack'
+gem 'parser'
+gem 'rake'
+
+
+
+
 group :test do
   gem 'rspec'
   gem 'rubocop', '0.79.0'
