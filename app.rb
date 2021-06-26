@@ -6,12 +6,11 @@ class Chitter < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-  get '/' do
+    get '/' do
     'Welcome to Chitter. Please sign up'
   end
-
   get '/peeps' do
-    @peeps = Peep.all
+   p  @peeps = Peep.all
     erb :index
   end
 
@@ -20,11 +19,8 @@ class Chitter < Sinatra::Base
   end
 
   post '/peeps' do
-    newpeep = params['newpeep']
-    connection = PG.connect(dbname: 'chitter_test')
-    connection.exec("INSERT INTO peeps (text) VALUES('#{newpeep}')")
-
-    redirect '/peeps'
+    Peep.create(text: params['text'])
+    p redirect '/peeps'
   end
 
   run! if app_file == $0
