@@ -7,7 +7,7 @@ class Chitter < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
-   enable :sessions
+   enable :sessions, :method_override
 
   get '/' do
     @user = session[:user]
@@ -42,5 +42,9 @@ class Chitter < Sinatra::Base
     p redirect '/peeps'
   end
 
+  delete '/peeps/:id' do
+    Peep.delete(id: params[:id])
+    redirect '/peeps'
+  end
   run! if app_file == $0
 end

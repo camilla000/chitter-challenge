@@ -1,21 +1,28 @@
 require 'pg'
 require 'time'
+
 class Peep
+
   attr_reader :id, :text, :time
+
   def initialize(id:, text:, time:)
     @id = id
     @text = text
     @time = time
   end
+
   def self.all
+
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'chitter_test')
     else
       connection = PG.connect(dbname: 'chitter')
     end
+
     peeps = connection.exec("SELECT * FROM peeps;")
     peeps.map { |peep| Peep.new(id: peep['id'], text: peep['text'], time: peep['time']) }
     end
+
   def self.create(text:)
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'chitter_test')
@@ -30,4 +37,14 @@ class Peep
     peeps = Peep.all
     peeps.reverse { |peep| peep.time }
   end
+
+   def self.delete(id:)
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'chitter_test')
+    else
+      connection = PG.connect(dbname: 'chitter')
+    end
+    connection.exec("DELETE FROM peeps WHERE id = #{id}")
+  end
+
 end

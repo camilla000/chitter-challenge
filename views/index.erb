@@ -20,7 +20,13 @@
   <% @peeps.each do |peep| %>
     <p class="peep"><br><%= peep.text %><br>
     <%= peep.time %>
-    
+     <br></br>
+       <form action="/peeps/<%= peep.id %>" method="post">
+          <input type='hidden' name='_method' value='DELETE'/>
+          <input type="submit" value="Delete" />
+      </form>
+
+     
       
         
     </br></p>

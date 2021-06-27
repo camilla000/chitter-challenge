@@ -12,7 +12,7 @@ feature 'Viewing peeps' do
   end
 
   scenario 'A user can see the peeps in reverse chronological order' do
-    allow(peep.time).to receive(:now).and_return(peep.time("2019-04-27 11:14:20 +0100"))
+    allow(Peep.time).to receive(:now).and_return(peep.time("2019-04-27 11:14:20 +0100"))
     Peep.create(text: "First peep")
     sleep(0.2)
     Peep.create(text: "Second peep")

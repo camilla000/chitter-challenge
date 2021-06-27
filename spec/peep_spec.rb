@@ -32,4 +32,14 @@ describe 'Peep' do
 
     end
   end
+
+  describe '.delete' do
+    it 'deletes a peep' do
+      peep = Peep.create(text: 'Peep3')
+
+      Peep.delete(id: peep.id)
+
+      expect(Peep.all.length).to eq 0
+    end
+  end
 end

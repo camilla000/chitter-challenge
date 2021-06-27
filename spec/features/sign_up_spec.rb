@@ -6,6 +6,6 @@ feature 'A user can register' do
     fill_in "email", with: "a.ham@email.com"
     fill_in "password", with: "work"
     click_button "Submit"
-    expect(page).to have_content("Hey Alexander Hamilton!")
+    expect(page).to have_content("Hey Alexander Hamilton, how are you doing")
   end
 end
