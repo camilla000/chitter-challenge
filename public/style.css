@@ -4,16 +4,56 @@ body {
 
 
 h1 {
-  color: #184E77;
+  color: #1E6091;
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   font-size: 40px;
 }
 
 h2 {
+  color: #1E6091;
   font-size: 30px;
 }
 
+h3 {
+  color: #1E6091;
+}
+
 p {
+  color: #1E6091;
 font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 14px
+}
+
+.button {
+background-color: #184E77;
+border: none;
+color: black;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+}
+.button:hover {
+background-color: #76C893;
+color: white;
+}
+
+.peep {
+  background-color: #99D98C;
+  box-shadow: 0 0 5px rgba(0,0,0,0.4);
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding: 10px 10px;
+  border: 2px solid #34A0A4;
+  border-radius:10px;
+  min-height: 52px;
+}
+
+.home {
+
+  text-align: center;
+  padding-top: 150px;
 }

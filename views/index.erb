@@ -5,12 +5,20 @@
   </head>
 
 <center>
-  <h1>Latest Peeps</h1>
+   <h2>Hey <%= @name %>, how are you doing?</h2>
   <img src="https://image.flaticon.com/icons/png/512/616/616438.png" alt="chick" height="100" width="100">
+
+   <br></br>
+   
+
+  <form action="/peeps/new">
+  <input class="button" type="submit" value="Post a Peep!"/>
+  </form>
+  <h3>Check the Latest Peeps: </h3>
 
 <ul>
   <% @peeps.each do |peep| %>
-    <p><br><%= peep.text %><br>
+    <p class="peep"><br><%= peep.text %><br>
     <%= peep.time %>
     
       
@@ -18,7 +26,7 @@
     </br></p>
   <% end %>
 </ul>
-
+</center>
 
 
   <%# <img src="https://image.flaticon.com/icons/png/512/616/616438.png" alt="chick" height="100" width="100"> %>
