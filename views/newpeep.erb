@@ -1,5 +1,55 @@
+ <style>
+  body {
+  background-image: url("/images/background1.png");
+  background-size: 700px 800px;
+  padding-top: 150px;
+}
+
+.button:hover {
+background-color: #76C893;
+color: white;
+} 
+
+.smallButton {
+  background-color: #34A0A4;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px; 
+  
+
+} 
+
+h1 {
+  color: #1E6091;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 40px;
+}
+
+.textBox {
+  
+  width: 80%;
+  height: 150px;
+  box-sizing: border-box;
+  border: 2px solid #34A0A4;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  
+}
+ </style>
+
+<center>
+
+<h1>What do you have to peep? </h1>
+<br></br>
 
 <form action="/peeps" method="post">
-  <input type="text" name="text" />
-  <input type="submit" value="Post Peep" />
+  <input class ="textBox" type="text" name="text" />
+  <br></br>
+  <input class="smallButton" type="submit" value="Post Peep" />
 </form>
+
+</center>

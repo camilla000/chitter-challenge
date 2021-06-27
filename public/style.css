@@ -1,5 +1,8 @@
 body {
-  background-color: #D9ED92;
+  background-image: url("/images/background1.png");
+  background-size: 700px 800px;
+  /* background-color: #D9ED92; */
+  
 }
 
 
@@ -24,20 +27,30 @@ font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 font-size: 14px
 }
 
-.button {
-background-color: #184E77;
-border: none;
-color: black;
-padding: 15px 32px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 16px;
-}
+
 .button:hover {
 background-color: #76C893;
 color: white;
+} 
+.smallButton:hover {
+background-color: #76C893;
+color: white;
+} 
+.register {
+  padding-top: 150px;
 }
+
+.smallButton {
+  background-color: #34A0A4;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 10px; */
+
+} 
 
 .peep {
   background-color: #99D98C;
@@ -56,4 +69,15 @@ color: white;
 
   text-align: center;
   padding-top: 150px;
+}
+
+.button {
+  background-color: #184E77;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

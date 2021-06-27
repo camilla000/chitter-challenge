@@ -16,22 +16,22 @@
   </form>
   <h3>Check the Latest Peeps: </h3>
 
-<ul>
-  <% @peeps.each do |peep| %>
-    <p class="peep"><br><%= peep.text %><br>
-    <%= peep.time %>
-     <br></br>
-       <form action="/peeps/<%= peep.id %>" method="post">
-          <input type='hidden' name='_method' value='DELETE'/>
-          <input type="submit" value="Delete" />
-      </form>
-
-     
+<div>
+  <ul>
+    <% @peeps.each do |peep| %>
+      <p class="peep"><br><%= peep.text %><br>
       
-        
-    </br></p>
-  <% end %>
-</ul>
+      <%= peep.time %>
+      <br></br>
+        <form action="/peeps/<%= peep.id %>" method="post">
+            <input type='hidden' name='_method' value='DELETE'/>
+            <input  class="smallButton" type="submit" value="Delete Peep" />
+        </form>
+
+      </br></p>
+    <% end %>
+  </ul>
+</div>
 </center>
 
 
