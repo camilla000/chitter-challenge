@@ -21,7 +21,7 @@ This is the Makers Academy Week 4 weekend challenge. The challenge was to build 
 
 ## Homepage:
 
-![Chitter Homepage]()
+![Chitter Homepage](https://github.com/camilla000/chitter-challenge/blob/master/public/images/homepage.png)
 
 
 ## User stories:
